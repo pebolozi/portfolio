@@ -77,13 +77,13 @@ header{
   backdrop-filter:saturate(120%) blur(8px);
   transition:height .8s ease, padding .8s ease;
   z-index:1000;
-  padding: 0 50px;
 }
 header.shrink{
   display: flex;align-items: center;
   height:var(--header-h-shrink);
   padding:0 20px 0 calc(var(--sidebar-w) + 20px);
   background:linear-gradient(180deg, rgba(0, 72, 172, 1), rgba(0, 72, 172,.6));
+  padding: 0 50px;
 }
 header .hero-layer{position: absolute;top: 46%;left:50%;transform: translate(-50%, -50%);}
 header .hero-layer::before{
@@ -219,6 +219,11 @@ h2{padding-left:12px;margin:16px 0;}
 }
 
 
+@media (max-width: 390px) {
+  .m_br{display: block;}
+}
+
+
 
 
 
@@ -264,3 +269,11 @@ h2{padding-left:12px;margin:16px 0;}
 
 /*type3 좁은 보더*/
 .bx_accor.type3 .bx_accor_cont.narrow_bd{margin:8px 12px 0;padding:16px 0 8px;}
+
+
+@media (max-width: 768px) {
+  body{width:100%;}
+  main{margin-left: 0;}
+  aside{display: none;}
+  .grid.cols-3, .grid.cols-2{grid-template-columns: repeat(1, 1fr);}
+}
