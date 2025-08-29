@@ -13,13 +13,4 @@
     head.appendChild(link);
   });
 
-  const scripts = [
-    "http://code.jquery.com/jquery-3.6.0.min.js",
-  ];
-  scripts.forEach(src => {
-    const s = document.createElement("script");
-    s.src = src;
-    s.defer = true;
-    head.appendChild(s);
-  });
 })();
