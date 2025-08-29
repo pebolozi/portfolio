@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박은비의 portfolio</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Park Eunbee" />
+  <meta property="og:title" content="Park Eunbee's portfolio" />
+  <meta property="og:description" content="박은비의 포트폴리오입니다." />
+
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Park Eunbee" />
+  <meta property="twitter:title" content="Park Eunbee's portfolio" />
+  <meta property="twitter:description" content="박은비의 포트폴리오입니다." />
+
+  <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- GSAP & ScrollToPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script defer src="./js/assets.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <header id="top" role="banner">
+    <div class="hero-layer" aria-hidden="false">
+      <h1>Portfolio</h1>
+      <p class="text">퍼블리셔 <span class="name">박은비</span>입니다.</p>
+      <div class="details">
+        <span class="dot dot_1"></span>
+        <span class="dot dot_2"></span>
+        <span class="dot dot_3"></span>
+        <span class="dot dot_4"></span>
+        <span class="dot dot_5"></span>
+        <span class="dot dot_6"></span>
+      </div>
+    </div>
+    <div class="site-layer" aria-hidden="true" inert>
+      <div class="brand">
+        <span class="brand__title">박은비 <span class="design_ft">Portfolio</span></span>
+        <span class="tagline">퍼블리셔</span>
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    <!-- side navigation -->
+    <aside class="navigation">
+      <nav aria-label="섹션 내비게이션">
+        <ul>
+          <li><a class="snav__link" href="#works">Works</a></li>
+          <li><a class="snav__link" href="#components">Components</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="content" role="main">
+      <!-- Home -->
+      <section id="home" aria-labelledby="home-title" class="section--snap">
+        <div class="home_inner">
+          <p class="home-title">
+            <span id="careerText" class="career"></span><br />박은비입니다.
+          </p>
+          <p class="muted">
+            <span class="hashtag">&#35;접근성</span>
+            <span class="hashtag">&#35;크로스브라우징</span>
+            <span class="hashtag">&#35;협업</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Works -->
+      <section id="works" aria-labelledby="works-title">
+        <h2 id="works-title">Works</h2>
+        <div class="grid cols-3">
+          <article class="card">
+            <div>
+              <h3>NH농협카드<br />UX 컨설팅 및 고도화 프로젝트</h3>
+              <p class="muted">Vue 기반 기존 컴포넌트 활용</p>
+            </div>
+            <ul class="works__details">
+              <li>- SCSS 퍼블리싱, GitLab 협업</li>
+              <li>- HTML, SCSS, JS, Figma</li>
+            </ul>
+          </article>
+          <article class="card folder">
+            <div>
+              <h3>IBK기업은행<br /> 개인 스마트뱅킹 리뉴얼 구축 프로젝트</h3>
+              <p class="muted">가이드 · 컴포넌트 구축</p>
+            </div>
+            <ul class="works__details">
+              <li>- UI 컴포넌트 구축, 이슈 대응</li>
+              <li>- HTML, SCSS, JS, SVN</li>
+            </ul>
+          </article>
+          <article class="card folder">
+            <div>
+              <h3>신한카드<br /> 디지털 채널 통합 운영 프로젝트</h3>
+              <p class="muted">CMS, 접근성 검수, 상시 운영</p>
+            </div>
+            <ul class="works__details">
+              <li>- 접근성, 크로스브라우징</li>
+              <li>- HTML5, CSS3, Figma, CMS</li>
+            </ul>
+          </article>
+        </div>
+        <p class="muted pdl20 bul">대규모 프로젝트(퍼블리싱 인원 10인 이상)로, 기여도 기준상 간략히 기재하였습니다. 자세한 내용은 경력기술서를 참고해 주세요.</p>
+      </section>
+
+      <!-- Components -->
+      <section id="components" aria-labelledby="components-title">
+        <h2 id="components-title">Components</h2>
+        <div class="grid cols-2">
+          <article class="card" aria-labelledby="acc-title">
+            <h3 id="acc-title">Accordion(A11y)</h3>
+            <p class="muted">aria-expanded/controls, 키보드 조작 가능</p>
+            <div class="bx_accor_wrap" data-accor-type="basic">
+              <div class="bx_accor type3"><!--on 추가시 열린 상태가 디폴트-->
+                  <p class="bx_accor_tit">
+                      <button type="button" class="btn_accor" aria-expanded="false">
+                          <p style="color: #333;">아코디언 컴포넌트입니다</p>
+                          <span class="btn_accor_ico">내용 보기</span>
+                      </button>
+                  </p>
+                  <div class="bx_accor_cont">
+                      <div class="bx_accor_inner">
+                          <div class="check_list_group chk" style="color: #333;">
+                              aria-expanded/controls, 키보드 조작 가능한 아코디언 예제입니다.<br/>
+                              .on 클래스로 닫힘/열림 상태 설정할 수 있습니다.<br/>
+                              aria-expanded 속성이 반영되어 있습니다.
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="inpt-title">
+            <h3 id="inpt-title">Textfield</h3>
+            <p class="muted">label-input 매칭으로 접근성을 확보한 텍스트 필드<br/>label이 없을 경우 aria-label/aria-labelledby 사용</p>
+            <div class="bx_input">
+              <label for="input_labl">
+                  <span class="bx_input_tit">타이틀</span>
+                  <span class="label_blue">선택</span>
+              </label>
+              <div class="bx_input_box clearable">
+                  <input type="text" id="input_labl" class="bx_input_txt" data-convert-target="convert" placeholder="텍스트를 입력해 주세요.">
+                  <div class="bx_input_item">
+                      <button type="button" class="clearable_btn">텍스트 지움</button>
+                  </div>
+              </div>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="tabs-title">
+            <h3 id="tabs-title">Tabs(내부 탭 상태 유지)</h3>
+            <p class="muted">location.hash를 활용해 탭 상태 유지</p>
+            <div class="tabset index-type">
+              <div class="tab-nav" role="tablist">
+                  <button type="button" class="tab" role="tab" aria-controls="panel1" aria-selected="true">TAB A</button>
+                  <button type="button" class="tab" role="tab" aria-controls="panel2" aria-selected="false">TAB B</button>
+                  <button type="button" class="tab" role="tab" aria-controls="panel3" aria-selected="false">TAB C</button>
+              </div>
+              <div class="tab-panels">
+                  <div class="tab-panel" id="panel1">
+                    
+                    <div class="tabset chip-type"><!--이중탭-->
+                      <div class="tab-nav" role="tablist">
+                          <button type="button" class="tab" role="tab" aria-controls="panel1-1" aria-selected="true">tab a</button>
+                          <button type="button" class="tab" role="tab" aria-controls="panel1-2" aria-selected="false">tab b</button>
+                          <button type="button" class="tab" role="tab" aria-controls="panel1-3" aria-selected="false">tab c</button>
+                      </div>
+                      <div class="tab-panels">
+                          <div class="tab-panel" id="panel1-1">이중탭 컴포넌트 입니다.</div>
+                          <div class="tab-panel" id="panel1-2">A-b 패널입니다.</div>
+                          <div class="tab-panel" id="panel1-3">A-c 패널입니다.</div>
+                      </div>
+                    </div>            
+                  </div>
+                  <div class="tab-panel" id="panel2">B 패널입니다.</div>
+                  <div class="tab-panel" id="panel3">C 패널입니다.</div>
+              </div>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="ani-title">
+            <h3 id="ani-title">Animation</h3>
+            <p class="muted">css를 활용한 애니메이션 구현<br/>유지보수 효율/재사용성을 고려한 공통 구조</p>
+            <div class="ibk_auth">
+              <div class="ibk_auto_bg"></div>
+              <div class="ibk_auto_info">
+                  <div class="ibk_auto_info_top">
+                      <!--가입전-->
+                      <!-- <div class="ibk_auto_logo2">
+                          <img src="./img/com/bg_ibk_auth.png">
+                      </div> -->
+                      <!--//가입전-->
+                      <!--가입후-->
+                      <div>
+                          <div class="ibk_auth_tit">A인증서 개인(AA은행용)</div>
+                          <div class="ibk_auth_name"><span>기운센</span>님</div>
+                      </div>
+                      <!--//가입후-->
+                  </div>
+                  <div class="ibk_auth_info_bot">
+                      <!--가입후-->
+                      <div>
+                          <div class="ibk_auth_validity">
+                              <div class="ibk_auth_validity_tit">유효기간</div>
+                              <div class="ibk_auth_validity_txt day60"><!--유효기간 60일 이하 day60 추가-->
+                                  <span class="date">2026.12.20</span>
+                                  <span class="i_lb ibk_auth_lb">D-<span>60</span></span>
+                              </div>
+                          </div>
+                          <div class="ibk_auth_safe">
+                              <div class="ibk_auth_img">
+                                  <img src=".//img/com/ibk_gov_sign.png" alt="정부">
+                                  <img src="./img/com/ibk_trust_sign.png" alt="TRUST Sign">
+                              </div>
+                              <div class="ibk_auth_safe_txt">인증서 안전하게 보관중</div>
+                          </div>
+                      </div>
+                      <!--//가입후-->
+                      <!--가입전-->
+                      <!-- <div class="btn_wrap">
+                          <button type="button" class="btn_basic type2 fill">IBK인증서로 업그레이드하기</button>
+                      </div> -->
+                      <!--//가입전-->
+                  </div>
+              </div>
+              <!--가입후-->
+              <div class="ibk_auto_logo bg">
+                  <img src="./img/com/bg_ibk_auth.png">
+              </div>
+              <!--//가입후-->
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <div class="card">
+          <ul class="about__ul">
+            <li>
+              <p class="title">Frontend</p>
+              <p class="text">- HTML5: 시맨틱 마크업 기반 구조 설계</p>
+              <p class="text">- CSS3/SCSS: 반응형 레이아웃, 공통 컴포넌트 스타일 설계, 애니메이션 작업</p>
+              <p class="text">- JavaScript: UI 컴포넌트 구현</p>
+            </li>
+            <li>
+              <p class="title">Framework</p>
+              <p class="text">- Vue.js: 기존 컴포넌트 구조를 분석·활용하여 화면 퍼블리싱 수행</p>
+            </li>
+            <li>
+              <p class="title">웹표준/접근성</p>
+              <p class="text">- 접근성: WAI-ARIA 속성 적용, 스크린리더(VoiceOver, TalkBack) 테스트 경험</p>
+              <p class="text">- 크로스 브라우징 대응: PC 웹, 모바일 웹뷰, 주요 브라우저 환경에서 검수 및 최적화</p>
+              <p class="text">- 웹표준 준수</p>
+              <p class="text">- SEO: 메타태그, Heading 구조, 시맨틱 마크업</p>
+            </li>
+            <li>
+              <p class="title">협업</p>
+              <p class="text">- Git/GitLab, Slack, Figma</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section id="last" aria-labelledby="last-title">
+        <div class="last_txt">
+           웹표준과 접근성을 준수한 퍼블리싱을 기반으로, 다양한 환경에서 안정적인 결과물을 만들어왔습니다. <br/>기획·디자인·개발과의 협업 경험을 통해 <span class="point">원활한 커뮤니케이션과 문제해결력</span>을 쌓았으며, <br/><span class="point">새로운 기술에 빠르게 적응</span>하는 성장 가능성을 갖추고 있습니다. <br/>앞으로도 사용자 중심의 세심한 퍼블리싱을 통해 프로젝트의 완성도를 높이는 퍼블리셔가 되고자 합니다.
+        </div>
+      </section>
+
+      <!-- Contact -->
+    </main>
+  </div>
+
+</body>
+</html>
