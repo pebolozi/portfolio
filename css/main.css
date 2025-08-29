@@ -37,6 +37,13 @@ section#about .about__ul li:first-child{margin-top:0;}
   bottom:-170px;right:60px;
 }
 .last_txt .point{color:var(--text);padding: 0 8px;background-color: #fff; border-radius: 8px;}
+@media (max-width: 768px) {
+  .last_txt {font-size:16px; padding: 30px 10px;}
+  .last_txt::before{top:-140px;}
+  .last_txt::after{bottom:-160px;right:0;}
+}
+
+
 
 .tabset{color:#333;}
 .tabset.index-type{

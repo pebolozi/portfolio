@@ -272,8 +272,10 @@ h2{padding-left:12px;margin:16px 0;}
 
 
 @media (max-width: 768px) {
-  body{width:100%;}
+  body{width:100wh;overflow: hidden;}
   main{margin-left: 0;}
   aside{display: none;}
   .grid.cols-3, .grid.cols-2{grid-template-columns: repeat(1, 1fr);}
+  .hero-layer h1{font-size:70px;}
+  header .hero-layer::before{width:300px;height:100px;}
 }
